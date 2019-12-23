@@ -108,3 +108,12 @@ Files and directories under `docs/` contain detailed information about configuri
 
 Running it in docker:
 - https://coreos.com/quay-enterprise/docs/latest/running-chihaya.html
+
+- The infohash needs to be separated with '%'
+
+eg
+a1b2c3d4e5a1b2c3d4e5a1b2c3d4e5a1b2c3d4e5 
+becomes: 
+%a1%b2%c3%d4%e5%a1%b2%c3%d4%e5%a1%b2%c3%d4%e5%a1%b2%c3%d4%e5
+
+https://stackoverflow.com/questions/39997621/why-my-get-request-to-a-torrent-tracker-doesnt-work
