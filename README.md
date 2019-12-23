@@ -102,3 +102,9 @@ Files and directories under `docs/` contain detailed information about configuri
 - [BitTorrent.org](https://github.com/bittorrent/bittorrent.org): a static website containing the BitTorrent spec and all BEPs
 - [OpenTracker](http://erdgeist.org/arts/software/opentracker): a popular BitTorrent tracker written in C
 - [Ocelot](https://github.com/WhatCD/Ocelot): a private BitTorrent tracker written in C++
+
+
+## Eamonn's notes
+
+Running it in docker:
+- https://coreos.com/quay-enterprise/docs/latest/running-chihaya.html
