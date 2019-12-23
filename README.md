@@ -117,3 +117,41 @@ becomes:
 %a1%b2%c3%d4%e5%a1%b2%c3%d4%e5%a1%b2%c3%d4%e5%a1%b2%c3%d4%e5
 
 https://stackoverflow.com/questions/39997621/why-my-get-request-to-a-torrent-tracker-doesnt-work
+
+
+correct format for prehook:
+
+
+  prehooks:
+  #- name: jwt
+  #  options:
+  #    issuer: "https://issuer.com"
+  #    audience: "https://chihaya.issuer.com"
+  #    jwk_set_url: "https://issuer.com/keys"
+  #    jwk_set_update_interval: 5m
+
+  # - client_approval:
+  #   options:
+  #    whitelist:
+  #    - "OP1011"
+  #    blacklist:
+  #    - "OP1012"
+
+  #- name: interval variation
+  #  options:
+  #    modify_response_probability: 0.2
+  #    max_increase_delta: 60
+  #    modify_min_interval: true
+
+  # This block defines configuration used for torrent approval, it requires to be given
+  # hashes for whitelist or for blacklist. Hashes are hexadecimal-encoaded.
+  - name: torrent approval
+    options:
+    #  whitelist:
+    #  - "a1b2c3d4e5a1b2c3d4e5a1b2c3d4e5a1b2c3d4e5"
+     blacklist:
+     - "801E221D055A1C322104184B68098D800CB77EA5"
+    #  - "801e221d055a1c322104184b68098d800cb77ea5"
+
+
+    Doesn't throw an error but also doesn't work.
