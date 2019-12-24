@@ -121,7 +121,7 @@ https://stackoverflow.com/questions/39997621/why-my-get-request-to-a-torrent-tra
 
 correct format for prehook:
 
-
+```
   prehooks:
   #- name: jwt
   #  options:
@@ -153,5 +153,10 @@ correct format for prehook:
      - "801E221D055A1C322104184B68098D800CB77EA5"
     #  - "801e221d055a1c322104184b68098d800cb77ea5"
 
+```
 
     Doesn't throw an error but also doesn't work.
+    
+    Whitelist does work
+    
+   - The value in the torrent tracker announce url should include a param &jwt=
