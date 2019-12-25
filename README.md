@@ -164,3 +164,39 @@ correct format for prehook:
    
    
    INDENTATION MATTERS
+
+
+##JWT notes:
+
+This works for the payload:
+```
+{
+  "claim": "1234567890",
+  "name": "John Doe",
+  "infohash": "F1A05E480775DDBD8AC9D0A95D5D154182F8E5C6",
+  "Issuer": "http://192.168.0.13:8000",
+  "iss": "http://192.168.0.13:8000",
+  "auds": "https://chihaya.issuer.com",
+  "aud": "https://chihaya.issuer.com"
+}
+
+```
+With this as the header:
+
+```
+{
+  "alg": "HS256",
+  "typ": "JWT"
+}
+```
+
+and this as a the test signature
+
+```
+
+HMACSHA256(
+  base64UrlEncode(header) + "." +
+  base64UrlEncode(payload),
+  FdFYFzERwC2uCBB46pZQi4GG85LujR8obt-KWRBICVQ
+)
+```
